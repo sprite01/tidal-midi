@@ -88,8 +88,8 @@ fourController = ControllerShape {controls = [
                           -- velocity = ("vel", 0.5),
                           latency = 0.1}
 
-                          four = toShape fourController
-
+four = toShape fourController
+let
  (perfa, perfa_p) = pF "perfa" (Just 0)
  (perfb, perfb_p) = pF "perfb" (Just 0)
  (perfc, perfc_p) = pF "perfc" (Just 0)
