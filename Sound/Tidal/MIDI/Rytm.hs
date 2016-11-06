@@ -16,21 +16,21 @@ rytmController = ControllerShape {controls = [
                             mCC synth8_p 23,
 
                             mCC revpre_p 24,
-                            mCC revtime_p 25,
+                            mCC revtim_p 25,
                             mCC revfrq_p 26,
-                            mCC revgain_p 27,
+                            mCC revgai_p 27,
                             mCC revhpf_p 28,
                             mCC revlpf_p 29,
                             mCC revvol_p 31,
 
-                            mCC samptune_p 24,
-                            mCC sampfinetune_p 25,
-                            mCC sampbitreduction_p 26,
-                            mCC sampslot_p 27,
-                            mCC sampstart_p 28,
+                            mCC samptun_p 24,
+                            mCC sampfin_p 25,
+                            mCC sampbr_p 26,
+                            mCC sampsmp_p 27,
+                            mCC sampsta_p 28,
                             mCC sampend_p 29,
-                            mCC samploop_p 30,
-                            mCC samplevel_p 31,
+                            mCC samplop_p 30,
+                            mCC samplev_p 31,
 
                             mCC machtype_p 15,
 
@@ -51,15 +51,19 @@ rytmController = ControllerShape {controls = [
                             mCC perf6_p 41,
                             mCC perf7_p 42,
                             mCC perf8_p 43,
+                            mCC perf9_p 44,
+                            mCC perf10_p 45,
+                            mCC perf11_p 46,
+                            mCC perf12_p 47,
 
-                            mCC atk_p 78,
-                            mCC hld_p 79,
-                            mCC dec_p 80,
-                            mCC ovr_p 81,
-                            mCC del_p 82,
+                            mCC ampatk_p 78,
+                            mCC amphld_p 79,
+                            mCC ampdec_p 80,
+                            mCC ampovr_p 81,
+                            mCC ampdel_p 82,
                             mCC amprev_p 83,
                             mCC amppan_p 10,
-                            mCC vol_p 7
+                            mCC ampvol_p 7
                           ],
                          -- duration = ("dur", 0.05),
                          -- velocity = ("vel", 0.5),
@@ -148,30 +152,30 @@ rytm = toShape rytmController
 (filtenv, filtenv_p)      = pF "filtenv" (Just 0)
 
 -- amplitude params
-(atk, atk_p)          = pF "atk" (Just 0)
-(hld, hld_p)          = pF "hld" (Just 0)
-(dec, dec_p)          = pF "dec" (Just 0)
-(ovr, ovr_p)          = pF "ovr" (Just 0)
-(del, del_p)          = pF "del" (Just 0)
-(amprev, amprev_p)    = pF "amprev" (Just 0)
-(amppan, amppan_p)    = pF "amppan" (Just 0)
-(vol, vol_p)          = pF "vol" (Just 0)
+(ampatk, ampatk_p)          = pF "ampatk" (Just 0)
+(amphld, amphld_p)          = pF "amphld" (Just 0)
+(ampdec, ampdec_p)          = pF "ampdec" (Just 0)
+(ampovr, ampovr_p)          = pF "ampovr" (Just 0)
+(ampdel, ampdel_p)          = pF "ampdel" (Just 0)
+(amprev, amprev_p)          = pF "amprev" (Just 0)
+(amppan, amppan_p)          = pF "amppan" (Just 0)
+(ampvol, ampvol_p)          = pF "ampvol" (Just 0)
 
 -- delay params (only used on FX MIDI channel)
-(deltime ,deltime_p)          = pF "synth1" (Just 0)
-(delpingpong ,delpingpong_p)  = pF "synth2" (Just 0)
-(delwidth, delwidth_p)        = pF "synth3" (Just 0)
-(delfeedback, delfeedback_p)  = pF "synth4" (Just 0)
-(delhpf, delhpf_p)            = pF "synth5" (Just 0)
-(dellpf, dellpf_p)            = pF "synth6" (Just 0)
-(delrev, delrev_p)            = pF "synth7" (Just 0)
-(delvol, delvol_p)            = pF "synth8" (Just 0)
+(deltim, deltim_p)    = pF "synth1" (Just 0)
+(delx, delx_p)        = pF "synth2" (Just 0)
+(delwid, delwid_p)    = pF "synth3" (Just 0)
+(delfdb, delffdb_p)   = pF "synth4" (Just 0)
+(delhpf, delhpf_p)    = pF "synth5" (Just 0)
+(dellpf, dellpf_p)    = pF "synth6" (Just 0)
+(delrev, delrev_p)    = pF "synth7" (Just 0)
+(delvol, delvol_p)    = pF "synth8" (Just 0)
 
 -- reverb params (only used on FX MIDI channel)
 (revpre, revpre_p)       = pF "revpre" (Just 0)
-(revtime, revtime_p)     = pF "revtime" (Just 0)
+(revdec, revdec_p)       = pF "revdec" (Just 0)
 (revfrq, revfrq_p)       = pF "revfrq" (Just 0)
-(revgain, revgain_p)     = pF "revgain" (Just 0)
+(revgai, revgai_p)       = pF "revgai" (Just 0)
 (revhpf, revhpf_p)       = pF "revhpf" (Just 0)
 (revlpf, revlpf_p)       = pF "revlpf" (Just 0)
 (revvol, revvol_p)       = pF "revvol" (Just 0)
@@ -185,13 +189,17 @@ rytm = toShape rytmController
 (perf6, perf6_p)         = pF "perf6" (Just 0)
 (perf7, perf7_p)         = pF "perf7" (Just 0)
 (perf8, perf8_p)         = pF "perf8" (Just 0)
+(perf9, perf9_p)         = pF "perf9" (Just 0)
+(perf10, perf10_p)       = pF "perf10" (Just 0)
+(perf11, perf11_p)       = pF "perf11" (Just 0)
+(perf12, perf12_p)       = pF "perf12" (Just 0)
 
 -- sample
-(samptune, samptune_p)                 = pF "samptune" (Just 0)
-(sampfinetune, sampfinetune_p)         = pF "sampfinetune" (Just 0)
-(sampbitreduction, sampbitreduction_p) = pF "sampbitreduction" (Just 0)
-(sampslot, sampslot_p)                 = pF "sampslot" (Just 0)
-(sampstart, sampstart_p)               = pF "sampstart" (Just 0)
-(sampend, sampend_p)                   = pF "sampend" (Just 0)
-(samploop, samploop_p)                 = pF "samploop" (Just 0)
-(samplevel, samplevel_p)               = pF "samplevel" (Just 0)
+(samptun, samptun_p)     = pF "samptun" (Just 0)
+(sampfin, sampfin_p)     = pF "sampfin" (Just 0)
+(sampbr, sampbr_p)       = pF "sampbr" (Just 0)
+(sampsmp, sampsmp_p)     = pF "sampsmp" (Just 0)
+(sampsta, sampsta_p)     = pF "sampsta" (Just 0)
+(sampend, sampend_p)     = pF "sampend" (Just 0)
+(samplop, samplop_p)     = pF "samplop" (Just 0)
+(samplev, samplev_p)     = pF "samplev" (Just 0)
