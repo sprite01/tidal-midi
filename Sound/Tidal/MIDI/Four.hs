@@ -33,7 +33,7 @@ fourController = ControllerShape {controls = [
                            mCC osc2lev_p 78,
                            mCC osc2wav_p 79,
                            mCC osc2sub_p 80,
-                           mCC ocs2pw_p 81,
+                           mCC osc2pw_p 81,
                            mCC osc2spd_p 82,
                            mCC osc2pwm_p 83,
 
