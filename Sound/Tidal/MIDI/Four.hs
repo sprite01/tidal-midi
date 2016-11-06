@@ -88,18 +88,18 @@ fourController = ControllerShape {controls = [
                           -- velocity = ("vel", 0.5),
                           latency = 0.1}
 
- four = toShape fourController
+                          four = toShape fourController
 
- (perfa, perfa_p)         = pF "perfa" (Just 0)
- (perfb, perfb_p)         = pF "perfb" (Just 0)
- (perfc, perfc_p)         = pF "perfc" (Just 0)
- (perfd, perfd_p)         = pF "perfd" (Just 0)
- (perfe, perfe_p)         = pF "perfe" (Just 0)
- (perff, perff_p)         = pF "perff" (Just 0)
- (perfg, perfg_p)         = pF "perfg" (Just 0)
- (perfh, perfh_p)         = pF "perfh" (Just 0)
- (perfi, perfi_p)         = pF "perfi" (Just 0)
- (perfj, perfj_p)         = pF "perfj" (Just 0)
+ (perfa, perfa_p) = pF "perfa" (Just 0)
+ (perfb, perfb_p) = pF "perfb" (Just 0)
+ (perfc, perfc_p) = pF "perfc" (Just 0)
+ (perfd, perfd_p) = pF "perfd" (Just 0)
+ (perfe, perfe_p) = pF "perfe" (Just 0)
+ (perff, perff_p) = pF "perff" (Just 0)
+ (perfg, perfg_p) = pF "perfg" (Just 0)
+ (perfh, perfh_p) = pF "perfh" (Just 0)
+ (perfi, perfi_p) = pF "perfi" (Just 0)
+ (perfj, perfj_p) = pF "perfj" (Just 0)
 
  (osc1tun, osc1tun_p) = pF "osc1tun" (Just 0)
  (osc1det, osc1det_p) = pF "osc1det" (Just 0)
@@ -107,7 +107,7 @@ fourController = ControllerShape {controls = [
  (osc1lev, osc1lev_p) = pF "osc1lev" (Just 0)
  (osc1wav, osc1wav_p) = pF "osc1wav" (Just 0)
  (osc1sub, osc1sub_p) = pF "osc1sub" (Just 0)
- (osc1pw, osc1pw_p)  = pF "osc1pw" (Just 0)
+ (osc1pw, osc1pw_p) = pF "osc1pw" (Just 0)
  (osc1spd, osc1spd_p) = pF "osc1spd" (Just 0)
  (osc1pwm, osc1pwm_p) = pF "osc1pwm" (Just 0)
 
@@ -119,7 +119,7 @@ fourController = ControllerShape {controls = [
  (osc2lev, osc2lev_p) = pF "osc2lev" (Just 0)
  (osc2wav, osc2wav_p) = pF "osc2wav" (Just 0)
  (osc2sub, osc2sub_p) = pF "osc2sub" (Just 0)
- (osc2pw, osc2pw_p)  = pF "osc2pw" (Just 0)
+ (osc2pw, osc2pw_p) = pF "osc2pw" (Just 0)
  (osc2spd, osc2spd_p) = pF "osc2spd" (Just 0)
  (osc2pwm, osc2pwm_p) = pF "osc2pwm" (Just 0)
 
