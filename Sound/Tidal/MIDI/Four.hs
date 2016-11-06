@@ -82,7 +82,7 @@ fourController = ControllerShape {controls = [
                            mCC lfo2spd_p 118,
                            mCC lfo2mul_p 119,
                            mCC lfo2depa_p 26,
-                           mCC lfo2depb_p 27,
+                           mCC lfo2depb_p 27
                            ],
                           -- duration = ("dur", 0.05),
                           -- velocity = ("vel", 0.5),
