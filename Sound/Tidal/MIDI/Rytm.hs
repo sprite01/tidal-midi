@@ -65,7 +65,7 @@ rytmController = ControllerShape {controls = [
                          -- velocity = ("vel", 0.5),
                          latency = 0.1}
 
-oscRytm = toOscShape rytm
+rytm = toShape rytmController
 
 -- standard synth params
 (synth1, synth1_p) = pF "synth1" (Just 0)
