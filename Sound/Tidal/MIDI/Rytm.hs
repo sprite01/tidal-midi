@@ -61,7 +61,7 @@ rytmController = ControllerShape {controls = [
                             mCC amppan_p 10,
                             mCC vol_p 7
                           ],
-                         d-- duration = ("dur", 0.05),
+                         -- duration = ("dur", 0.05),
                          -- velocity = ("vel", 0.5),
                          latency = 0.1}
 
