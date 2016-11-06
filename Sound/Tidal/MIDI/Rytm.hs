@@ -16,7 +16,7 @@ rytmController = ControllerShape {controls = [
                             mCC synth8_p 23,
 
                             mCC revpre_p 24,
-                            mCC revtim_p 25,
+                            mCC revdec_p 25,
                             mCC revfrq_p 26,
                             mCC revgai_p 27,
                             mCC revhpf_p 28,
