@@ -62,8 +62,8 @@ analogController = ControllerShape {controls = [
                             mCC ovr_p 81,
                             mCC del_p 82,
                             mCC rev_p 83,
-                            mCC pan_p 10,
-                            mCC vol_p 7,
+                            mCC amppan_p 10,
+                            mCC ampvol_p 7,
 
 
                             mCC perfa_p 3,
@@ -239,8 +239,8 @@ analog = toShape analogController
 (ovr, ovr_p)          = pF "ovr" (Just 0)
 (del, del_p)          = pF "del" (Just 0)
 (rev, rev_p)          = pF "rev" (Just 0)
-(pan, pan_p)          = pF "pan" (Just 0)
-(vol, vol_p)          = pF "vol" (Just 0)
+(pan, pan_p)          = pF "amppan" (Just 0)
+(vol, vol_p)          = pF "ampvol" (Just 0)
 
 -- delay params (only used on FX MIDI channel)
 (deltim, deltim_p)    = pF "synth1" (Just 0)
