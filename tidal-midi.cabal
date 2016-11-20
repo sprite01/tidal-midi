@@ -29,5 +29,6 @@ library
                    Sound.Tidal.MIDI.KorgKP3
                    Sound.Tidal.MIDI.Rytm
                    Sound.Tidal.MIDI.Four
+                   Sound.Tidal.MIDI.Analog
 
   Build-depends: base < 5, tidal == 0.8, PortMidi == 0.1.6.0, time, containers, transformers
