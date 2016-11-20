@@ -56,14 +56,14 @@ analogController = ControllerShape {controls = [
                             mCC perf11_p 46,
                             mCC perf12_p 47,
 
-                            mCC atk_p 78,
-                            mCC hld_p 79,
-                            mCC dec_p 80,
-                            mCC ovr_p 81,
-                            mCC del_p 82,
-                            mCC rev_p 83,
-                            mCC amppan_p 10,
-                            mCC ampvol_p 7,
+                            mCC rampatk_p 78,
+                            mCC ramphld_p 79,
+                            mCC rampdec_p 80,
+                            mCC rampovr_p 81,
+                            mCC rampdel_p 82,
+                            mCC ramprev_p 83,
+                            mCC ramppan_p 10,
+                            mCC rampvol_p 7,
 
 
                             mCC perfa_p 3,
@@ -233,14 +233,14 @@ analog = toShape analogController
 (filtenv, filtenv_p)      = pF "filtenv" (Just 0)
 
 -- amplitude params
-(atk, atk_p)          = pF "atk" (Just 0)
-(hld, hld_p)          = pF "hld" (Just 0)
-(dec, dec_p)          = pF "dec" (Just 0)
-(ovr, ovr_p)          = pF "ovr" (Just 0)
-(del, del_p)          = pF "del" (Just 0)
-(rev, rev_p)          = pF "rev" (Just 0)
-(pan, pan_p)          = pF "amppan" (Just 0)
-(vol, vol_p)          = pF "ampvol" (Just 0)
+(rampatk, rampatk_p)          = pF "rampatk" (Just 0)
+(ramphld, ramphld_p)          = pF "ramphld" (Just 0)
+(rampdec, rampdec_p)          = pF "rampdec" (Just 0)
+(rampovr, rampovr_p)          = pF "rampovr" (Just 0)
+(rampdel, rampdel_p)          = pF "rampdel" (Just 0)
+(ramprev, ramprev_p)          = pF "ramprev" (Just 0)
+(ramppan, ramppan_p)          = pF "ramppan" (Just 0)
+(rampvol, rampvol_p)          = pF "rampvol" (Just 0)
 
 -- delay params (only used on FX MIDI channel)
 (deltim, deltim_p)    = pF "synth1" (Just 0)
