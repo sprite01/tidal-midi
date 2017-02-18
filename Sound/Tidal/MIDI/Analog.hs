@@ -1,4 +1,4 @@
-fourampmodule Sound.Tidal.MIDI.Analog where
+module Sound.Tidal.MIDI.Analog where
 
 import Sound.Tidal.Params
 import Sound.Tidal.MIDI.Control
