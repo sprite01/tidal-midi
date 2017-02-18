@@ -56,14 +56,14 @@ analogController = ControllerShape {controls = [
                             mCC perf11_p 46,
                             mCC perf12_p 47,
 
-                            mCC rampatk_p 78,
-                            mCC ramphld_p 79,
-                            mCC rampdec_p 80,
-                            mCC rampovr_p 81,
-                            mCC rampdel_p 82,
-                            mCC ramprev_p 83,
-                            mCC ramppan_p 10,
-                            mCC rampvol_p 7,
+                            mCC ampatk_p 78,
+                            mCC amphld_p 79,
+                            mCC ampdec_p 80,
+                            mCC ampovr_p 81,
+                            mCC ampdel_p 82,
+                            mCC amprev_p 83,
+                            mCC amppan_p 10,
+                            mCC ampvol_p 7,
 
                             mCC perfa_p 3,
                             mCC perfb_p 4,
@@ -109,15 +109,15 @@ analogController = ControllerShape {controls = [
                             mCC flt2res_p 90,
                             mCC flt2dep_p 103,
 
-                            mCC ampatk_p 104,
-                            mCC ampdec_p 105,
-                            mCC ampsus_p 106,
-                            mCC amprel_p 107,
-                            mCC ampcho_p 91,
-                            mCC ampdel_p 92,
-                            mCC amprev_p 93,
-                            mCC amppan_p 10,
-                            mCC ampvol_p 7,
+                            mCC fampatk_p 104,
+                            mCC fampdec_p 105,
+                            mCC fampsus_p 106,
+                            mCC famprel_p 107,
+                            mCC fampcho_p 91,
+                            mCC fampdel_p 92,
+                            mCC famprev_p 93,
+                            mCC famppan_p 10,
+                            mCC fampvol_p 7,
 
                             mCC envfatk_p 108,
                             mCC envfdec_p 109,
@@ -412,14 +412,14 @@ analog = toShape analogController
 (filtenv, filtenv_p)      = pF "filtenv" (Just 0)
 
 -- amplitude params
-(ampatk, ampatk_p)          = pF "rampatk" (Just 0)
-(amphld, amphld_p)          = pF "ramphld" (Just 0)
-(ampdec, ampdec_p)          = pF "rampdec" (Just 0)
-(ampovr, ampovr_p)          = pF "rampovr" (Just 0)
-(ampdel, ampdel_p)          = pF "rampdel" (Just 0)
-(amprev, amprev_p)          = pF "ramprev" (Just 0)
-(amppan, amppan_p)          = pF "ramppan" (Just 0)
-(ampvol, ampvol_p)          = pF "rampvol" (Just 0)
+(ampatk, ampatk_p)          = pF "ampatk" (Just 0)
+(amphld, amphld_p)          = pF "amphld" (Just 0)
+(ampdec, ampdec_p)          = pF "ampdec" (Just 0)
+(ampovr, ampovr_p)          = pF "ampovr" (Just 0)
+(ampdel, ampdel_p)          = pF "ampdel" (Just 0)
+(amprev, amprev_p)          = pF "amprev" (Just 0)
+(amppan, amppan_p)          = pF "amppan" (Just 0)
+(ampvol, ampvol_p)          = pF "ampvol" (Just 0)
 
 -- delay params (only used on FX MIDI channel)
 (deltim, deltim_p)    = pF "synth1" (Just 0)
@@ -448,12 +448,12 @@ analog = toShape analogController
 (distrev, distrev_p)       = pF "filtenv_p" (Just 0)
 
 -- compressor params (only used on FX MIDI channel)
-(compthr, compthr_p)       = pF "rampatk_p" (Just 0)
-(compatk, compatk_p)       = pF "ramphld_p" (Just 0)
-(comprel, comprel_p)       = pF "rampdec_p" (Just 0)
-(compmup, compmup_p)       = pF "rampovr_p" (Just 0)
-(comprat, comprat_p)       = pF "rampdel_p" (Just 0)
-(compseq, compseq_p)       = pF "ramprev_p" (Just 0)
+(compthr, compthr_p)       = pF "ampatk_p" (Just 0)
+(compatk, compatk_p)       = pF "amphld_p" (Just 0)
+(comprel, comprel_p)       = pF "ampdec_p" (Just 0)
+(compmup, compmup_p)       = pF "ampovr_p" (Just 0)
+(comprat, comprat_p)       = pF "ampdel_p" (Just 0)
+(compseq, compseq_p)       = pF "amprev_p" (Just 0)
 (compmix, compmix_p)       = pF "oscsnc_p" (Just 0)
 (compvol, compvol_p)       = pF "oscbnd_p" (Just 0)
 
@@ -484,10 +484,10 @@ analog = toShape analogController
 --lfo
 (lfospd, lfospd_p)       = pF "flt1dep" (Just 0)
 (lfomul, lfomul_p)       = pF "flt2dep" (Just 0)
-(lfofad, lfofad_p)       = pF "ampatk" (Just 0)
-(lfodst, lfodst_p)       = pF "ampdec" (Just 0)
-(lfowav, lfowav_p)       = pF "ampsus" (Just 0)
-(lfosph, lfosph_p)       = pF "amprel" (Just 0)
+(lfofad, lfofad_p)       = pF "fampatk" (Just 0)
+(lfodst, lfodst_p)       = pF "fampdec" (Just 0)
+(lfowav, lfowav_p)       = pF "fampsus" (Just 0)
+(lfosph, lfosph_p)       = pF "famprel" (Just 0)
 (lfomod, lfomod_p)       = pF "envfatk" (Just 0)
 (lfodep, lfodep_p)       = pF "envfdec" (Just 0)
 
@@ -539,15 +539,15 @@ analog = toShape analogController
 (flt2res, flt2res_p) = pF "flt2res" (Just 0)
 (flt2dep, flt2dep_p) = pF "flt2dep" (Just 0)
 
-(fampatk, fampatk_p) = pF "ampatk" (Just 0)
-(fampdec, fampdec_p) = pF "ampdec" (Just 0)
-(fampsus, fampsus_p) = pF "ampsus" (Just 0)
-(famprel, famprel_p) = pF "amprel" (Just 0)
-(fampcho, fampcho_p) = pF "ampcho" (Just 0)
-(fampdel, fampdel_p) = pF "ampdel" (Just 0)
-(famprev, famprev_p) = pF "amprev" (Just 0)
-(famppan, famppan_p) = pF "amppan" (Just 0)
-(fampvol, fampvol_p) = pF "ampvol" (Just 0)
+(amp_atk, amp_atk_p) = pF "fampatk" (Just 0)
+(amp_dec, amp_dec_p) = pF "fampdec" (Just 0)
+(amp_sus, amp_sus_p) = pF "fampsus" (Just 0)
+(amp_rel, amp_rel_p) = pF "famprel" (Just 0)
+(amp_cho, amp_cho_p) = pF "fampcho" (Just 0)
+(amp_del, amp_del_p) = pF "fampdel" (Just 0)
+(amp_rev, amp_rev_p) = pF "famprev" (Just 0)
+(amp_pan, amp_pan_p) = pF "famppan" (Just 0)
+(amp_vol, amp_vol_p) = pF "fampvol" (Just 0)
 
 (envfatk, envfatk_p) = pF "envfatk" (Just 0)
 (envfdec, envfdec_p) = pF "envfdec" (Just 0)
