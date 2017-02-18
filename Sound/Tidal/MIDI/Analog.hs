@@ -65,7 +65,6 @@ analogController = ControllerShape {controls = [
                             mCC ramppan_p 10,
                             mCC rampvol_p 7,
 
-
                             mCC perfa_p 3,
                             mCC perfb_p 4,
                             mCC perfc_p 8,
@@ -146,7 +145,7 @@ analogController = ControllerShape {controls = [
                             ],
                            -- duration = ("dur", 0.05),
                            -- velocity = ("vel", 0.5),
-                           latency = 0.1}
+                           latency = 0.01}
 
 
 analog = toShape analogController
@@ -173,54 +172,234 @@ analog = toShape analogController
 (bddec, bddec_p) = pF "synth3" (Just 0)
 (bdswt, bdswt_p) = pF "synth5" (Just 0)
 
--- FM bd params
-(fmbdfmamt, fmbdfmamt_p) = pF "synth4" (Just 0)
-(fmbdfmswt, fmbdfmswt_p) = pF "synth6" (Just 0)
-(fmbdfmdec, fmbdfmdec_p) = pF "synth7" (Just 0)
-(fmbdfmtun, fmbdfmtun_p) = pF "synth8" (Just 0)
+--BD plastic
+(bdpllev, bdpllev_p) = pF "synth1" (Just 0)
+(bdpltun, bdpltun_p) = pF "synth2" (Just 0)
+(bdpldec, bdpldec_p) = pF "synth3" (Just 0)
+(bdplmod, bdplmod_p) = pF "synth4" (Just 0)
+(bdplswt, bdplswt_p) = pF "synth5" (Just 0)
+(bdplswd, bdplswd_p) = pF "synth6" (Just 0)
+(bdpltyp, bdplswd_p) = pF "synth7" (Just 0)
+(bdpltic, bdpltic_p) = pF "synth8" (Just 0)
 
--- hard bd params
-(hardbdhold, hardbdhold_p) = pF "synth4" (Just 0)
-(hardbdsnap, hardbdsnap_p) = pF "synth6" (Just 0)
-(hardbdwav, hardbdwav_p)   = pF "synth7" (Just 0)
-(hardbdtic, hardbdtic_p)   = pF "synth8" (Just 0)
+--BD silky
+(bdsilev, bdsilev_p) = pF "synth1" (Just 0)
+(bdsitun, bdsitun_p) = pF "synth2" (Just 0)
+(bdsidec, bdsidec_p) = pF "synth3" (Just 0)
+(bdsiswd, bdsiswd_p) = pF "synth4" (Just 0)
+(bdsiswt, bdsiswt_p) = pF "synth5" (Just 0)
+(bdsihld, bdsihld_p) = pF "synth6" (Just 0)
+(bdsiclk, bdsiclk_p) = pF "synth7" (Just 0)
+(bdsidus, bdsidus_p) = pF "synth8" (Just 0)
 
--- classic bd params
-(clasbdswd, clasbdswd_p) = pF "synth6" (Just 0)
-(clasbdtra, clasbdtra_p) = pF "synth7" (Just 0)
-(clasbdwav, clasbdwav_p) = pF "synth8" (Just 0)
+--BD sharp
+(bdshlev, bdshlev_p) = pF "synth1" (Just 0)
+(bdshtun, bdshtun_p) = pF "synth2" (Just 0)
+(bdshdec, bdshdec_p) = pF "synth3" (Just 0)
+(bdshswd, bdshswd_p) = pF "synth4" (Just 0)
+(bdshswt, bdshswt_p) = pF "synth5" (Just 0)
+(bdshhld, bdshhld_p) = pF "synth6" (Just 0)
+(bdshtic, bdshtic_p) = pF "synth7" (Just 0)
+(bdshwav, bdshwav_p) = pF "synth8" (Just 0)
 
--- generic sd params (decay, noise decay, noise level)
-(sddec, sddec_p) = pF "synth3" (Just 0)
-(sdnod, sdnod_p) = pF "synth6" (Just 0)
-(sdnol, sdnol_p) = pF "synth7" (Just 0)
+--BD FM
+(bdfmlev, bdfmlev_p) = pF "synth1" (Just 0)
+(bdfmtun, bdfmtun_p) = pF "synth2" (Just 0)
+(bdfmdec, bdfmdec_p) = pF "synth3" (Just 0)
+(bdfmfma, bdfmfma_p) = pF "synth4" (Just 0)
+(bdfmswt, bdfmdec_p) = pF "synth5" (Just 0)
+(bdfmfms, bdfmfms_p) = pF "synth6" (Just 0)
+(bdfmfmd, bdfmfmd_p) = pF "synth7" (Just 0)
+(bdfmfmt, bdfmfmt_p) = pF "synth8" (Just 0)
 
--- hard sd params
-(hardsdswd, hardsdswd_p) = pF "synth4" (Just 0)
-(hardsdtic, hardsdtic_p) = pF "synth5" (Just 0)
-(hardsdswt, hardsdswt_p) = pF "synth8" (Just 0)
+--BD hard
+(bdhdlev, bdhdlev_p) = pF "synth1" (Just 0)
+(bdhdtun, bdhdtun_p) = pF "synth2" (Just 0)
+(bdhddec, bdhddec_p) = pF "synth3" (Just 0)
+(bdhdhld, bdhdhld_p) = pF "synth4" (Just 0)
+(bdhdswt, bdhddec_p) = pF "synth5" (Just 0)
+(bdhdsnp, bdhdsnp_p) = pF "synth6" (Just 0)
+(bdhdwav, bdhdwav_p) = pF "synth7" (Just 0)
+(bdhdtic, bdhdtic_p) = pF "synth8" (Just 0)
 
--- classic sd params
-(classddet, classddet_p) = pF "synth4" (Just 0)
-(classdsnp, classdsnp_p) = pF "synth5" (Just 0)
-(classdbal, classdbal_p) = pF "synth8" (Just 0)
+--BD classic
+(bdcllev, bdcllev_p) = pF "synth1" (Just 0)
+(bdcltun, bdcltun_p) = pF "synth2" (Just 0)
+(bdcldec, bdcltun_p) = pF "synth3" (Just 0)
+(bdclhld, bdclhld_p) = pF "synth4" (Just 0)
+(bdclswt, bdclswt_p) = pF "synth5" (Just 0)
+(bdclswd, bdclswd_p) = pF "synth6" (Just 0)
+(bdclwav, bdclwav_p) = pF "synth7" (Just 0)
+(bdcltra, bdcltra_p) = pF "synth8" (Just 0)
 
--- FM sd params
-(fmsdfmt, fmsdfmt_p) = pF "synth4" (Just 0)
-(fmsdfmd, fmsdfmd_p) = pF "synth5" (Just 0)
-(fmsdfma, fmsdfma_p) = pF "synth8" (Just 0)
+--SD natural
+(sdnalev, sdnalev_p) = pF "synth1" (Just 0)
+(sdnatun, sdnatun_p) = pF "synth2" (Just 0)
+(sdnabdy, sdnabdy_p) = pF "synth3" (Just 0)
+(sdnadec, sdnadec_p) = pF "synth4" (Just 0)
+(sdnalpf, sdnalpf_p) = pF "synth5" (Just 0)
+(sdnabal, sdnabal_p) = pF "synth6" (Just 0)
+(sdnares, sdnares_p) = pF "synth7" (Just 0)
+(sdnahpf, sdnahpf_p) = pF "synth8" (Just 0)
 
--- BT
-(btdec, btdec_p) = pF "synth3" (Just 0)
+--SD hard
+(sdhdlev, sdhdlev_p) = pF "synth1" (Just 0)
+(sdhdtun, sdhdtun_p) = pF "synth2" (Just 0)
+(sdhddec, sdhddec_p) = pF "synth3" (Just 0)
+(sdhdswd, sdhdswd_p) = pF "synth4" (Just 0)
+(sdhdtic, sdhdtic_p) = pF "synth5" (Just 0)
+(sdhdnod, sdhdnod_p) = pF "synth6" (Just 0)
+(sdhdnol, sdhdnol_p) = pF "synth7" (Just 0)
+(sdhdswt, sdhdswt_p) = pF "synth8" (Just 0)
 
--- CP
-(cpton, cpton_p) = pF "synth2" (Just 0)
-(cpnod, cpnod_p) = pF "synth3" (Just 0)
-(cpnum, cpnum_p) = pF "synth4" (Just 0)
-(cprat, cprat_p) = pF "synth5" (Just 0)
-(cpnol, cpnol_p) = pF "synth6" (Just 0)
-(cprnd, cprnd_p) = pF "synth7" (Just 0)
-(cpcpd, cpcpd_p) = pF "synth8" (Just 0)
+--SD classic
+(sdcllev, sdcllev_p) = pF "synth1" (Just 0)
+(sdcltun, sdcltun_p) = pF "synth2" (Just 0)
+(sdcldec, sdcldec_p) = pF "synth3" (Just 0)
+(sdcldet, sdcldet_p) = pF "synth4" (Just 0)
+(sdclsnp, sdclsnp_p) = pF "synth5" (Just 0)
+(sdclnod, sdclnod_p) = pF "synth6" (Just 0)
+(sdclnol, sdclnol_p) = pF "synth7" (Just 0)
+(sdclbal, sdclbal_p) = pF "synth8" (Just 0)
+
+--SD FM
+(sdfmlev, sdfmlev_p) = pF "synth1" (Just 0)
+(sdfmtun, sdfmtun_p) = pF "synth2" (Just 0)
+(sdfmdec, sdfmdec_p) = pF "synth3" (Just 0)
+(sdfmfmt, sdfmfmt_p) = pF "synth4" (Just 0)
+(sdfmfmd, sdfmfmd_p) = pF "synth5" (Just 0)
+(sdfmnod, sdfmnod_p) = pF "synth6" (Just 0)
+(sdfmnol, sdfmnol_p) = pF "synth7" (Just 0)
+(sdfmfma, sdfmfma_p) = pF "synth8" (Just 0)
+
+--RS hard
+(rshdlev, rshdlev_p) = pF "synth1" (Just 0)
+(rshdtun, rshdtun_p) = pF "synth2" (Just 0)
+(rshddec, rshdtun_p) = pF "synth3" (Just 0)
+(rshdswd, rshdswd_p) = pF "synth4" (Just 0)
+(rshdtic, rshdtic_p) = pF "synth5" (Just 0)
+(rshdnol, rshdnol_p) = pF "synth6" (Just 0)
+(rshdsym, rshdsym_p) = pF "synth7" (Just 0)
+(rshdswt, rshdswt_p) = pF "synth8" (Just 0)
+
+--RS classic
+(rscllev, rscllev_p) = pF "synth1" (Just 0)
+(rsclt1, rsclt1_p) = pF "synth2" (Just 0)
+(rscldec, rscldec_p) = pF "synth3" (Just 0)
+(rsclbal, rsclbal_p) = pF "synth4" (Just 0)
+(rsclt2, rsclt2_p) = pF "synth5" (Just 0)
+(rsclsym, rsclsym_p) = pF "synth6" (Just 0)
+(rsclnol, rsclnol_p) = pF "synth7" (Just 0)
+(rscltic, rscltic_p) = pF "synth8" (Just 0)
+
+--CP classic
+(cpcllev, cpcllev_p) = pF "synth1" (Just 0)
+(cpclton, cpclton_p) = pF "synth2" (Just 0)
+(cpclnod, cpclnod_p) = pF "synth3" (Just 0)
+(cpclnum, cpclnum_p) = pF "synth4" (Just 0)
+(cpclrat, cpclrat_p) = pF "synth5" (Just 0)
+(cpclnol, cpclnol_p) = pF "synth6" (Just 0)
+(cpclrnd, cpclrnd_p) = pF "synth7" (Just 0)
+(cpclcpd, cpclcpd_p) = pF "synth8" (Just 0)
+
+--BT classic
+(btcllev, btcllev_p) = pF "synth1" (Just 0)
+(btcltun, btcltun_p) = pF "synth2" (Just 0)
+(btcldec, btcldec_p) = pF "synth3" (Just 0)
+(btclsnp, btclsnp_p) = pF "synth6" (Just 0)
+(btclnol, btclnol_p) = pF "synth5" (Just 0)
+
+--XT classic
+(xtcllev, xtcllev_p) = pF "synth1" (Just 0)
+(xtcltun, xtcltun_p) = pF "synth2" (Just 0)
+(xtclswt, xtclswt_p) = pF "synth5" (Just 0)
+(xtclswd, xtclswd_p) = pF "synth4" (Just 0)
+(xtcldec, xtcldec_p) = pF "synth3" (Just 0)
+(xtclton, xtclton_p) = pF "synth8" (Just 0)
+(xtclnod, xtclnod_p) = pF "synth6" (Just 0)
+(xtclnol, xtclnol_p) = pF "synth7" (Just 0)
+
+--CH classic
+(chcllev, chcllev_p) = pF "synth1" (Just 0)
+(chcltun, chcltun_p) = pF "synth2" (Just 0)
+(chcldec, chcldec_p) = pF "synth3" (Just 0)
+(chclcol, chclcol_p) = pF "synth4" (Just 0)
+
+--CH metallic
+(chmtlev, chmtlev_p) = pF "synth1" (Just 0)
+(chmttun, chmttun_p) = pF "synth2" (Just 0)
+(chmtdec, chmtdec_p) = pF "synth3" (Just 0)
+
+--0H classic
+(ohcllev, ohcllev_p) = pF "synth1" (Just 0)
+(ohcltun, ohcltun_p) = pF "synth2" (Just 0)
+(ohcldec, ohcldec_p) = pF "synth3" (Just 0)
+(ohclcol, ohclcol_p) = pF "synth4" (Just 0)
+
+--OH metallic
+(ohmtlev, ohmtlev_p) = pF "synth1" (Just 0)
+(ohmttun, ohmttun_p) = pF "synth2" (Just 0)
+(ohmtdec, ohmtdec_p) = pF "synth3" (Just 0)
+
+--HH basic
+(hhbalev, hhbalev_p) = pF "synth1" (Just 0)
+(hhbatun, hhbatun_p) = pF "synth2" (Just 0)
+(hhbaton, hhbaton_p) = pF "synth4" (Just 0)
+(hhbatrd, hhbatrd_p) = pF "synth5" (Just 0)
+(hhbadec, hhbadec_p) = pF "synth3" (Just 0)
+(hhbarst, hhbarst_p) = pF "synth6" (Just 0)
+
+--CY classic
+(cycllev, cycllev_p) = pF "synth1" (Just 0)
+(cycltun, cycltun_p) = pF "synth2" (Just 0)
+(cyclton, cyclton_p) = pF "synth5" (Just 0)
+(cycldec, cycldec_p) = pF "synth3" (Just 0)
+(cyclcol, cyclcol_p) = pF "synth4" (Just 0)
+
+--CY metallic
+(cymtlev, cymtlev_p) = pF "synth1" (Just 0)
+(cymttun, cymttun_p) = pF "synth2" (Just 0)
+(cymtton, cymtton_p) = pF "synth4" (Just 0)
+(cymttrd, cymttrd_p) = pF "synth5" (Just 0)
+(cymtdec, cymtdec_p) = pF "synth3" (Just 0)
+
+--CY ride
+(cyrdlev, cyrdlev_p) = pF "synth1" (Just 0)
+(cyrdtun, cyrdtun_p) = pF "synth2" (Just 0)
+(cyrdtyp, cyrdtyp_p) = pF "synth5" (Just 0)
+(cyrdhit, cyrdhit_p) = pF "synth4" (Just 0)
+(cyrddec, cyrddec_p) = pF "synth3" (Just 0)
+(cyrdc1, cyrdc1_p) = pF "synth6" (Just 0)
+(cyrdc2, cyrdc2_p) = pF "synth7" (Just 0)
+(cyrdc3, cyrdc3_p) = pF "synth8" (Just 0)
+
+--CB classic
+(cbcllev, cbcllev_p) = pF "synth1" (Just 0)
+(cbcltun, cbcltun_p) = pF "synth2" (Just 0)
+(cbcldec, cbcldec_p) = pF "synth3" (Just 0)
+(cbcldet, cbcldet_p) = pF "synth4" (Just 0)
+
+--CB metallic
+(cbmtlev, cbmtlev_p) = pF "synth1" (Just 0)
+(cbmttun, cbmttun_p) = pF "synth2" (Just 0)
+(cbmtdec, cbmtdec_p) = pF "synth3" (Just 0)
+(cbmtdet, cbmtdet_p) = pF "synth4" (Just 0)
+
+--noise GEN
+(noislev, noislev_p) = pF "synth1" (Just 0)
+(noislpf, noislpf_p) = pF "synth2" (Just 0)
+(noislpq, noislpq_p) = pF "synth6" (Just 0)
+(noisatk, noisatk_p) = pF "synth8" (Just 0)
+(noisdec, noisdec_p) = pF "synth3" (Just 0)
+(noishpf, noishpf_p) = pF "synth7" (Just 0)
+(noisswd, noisswd_p) = pF "synth4" (Just 0)
+(noisswt, noisswt_p) = pF "synth5" (Just 0)
+
+--impulse
+(pulslev, pulslev_p) = pF "synth1" (Just 0)
+(pulsatk, pulsatk_p) = pF "synth2" (Just 0)
+(pulsdec, pulsdec_p) = pF "synth3" (Just 0)
+(pulspol, pulspol_p) = pF "synth4" (Just 0)
 
 -- filter params
 (filtatk, filtatk_p)      = pF "filtatk" (Just 0)
@@ -233,14 +412,14 @@ analog = toShape analogController
 (filtenv, filtenv_p)      = pF "filtenv" (Just 0)
 
 -- amplitude params
-(rampatk, rampatk_p)          = pF "rampatk" (Just 0)
-(ramphld, ramphld_p)          = pF "ramphld" (Just 0)
-(rampdec, rampdec_p)          = pF "rampdec" (Just 0)
-(rampovr, rampovr_p)          = pF "rampovr" (Just 0)
-(rampdel, rampdel_p)          = pF "rampdel" (Just 0)
-(ramprev, ramprev_p)          = pF "ramprev" (Just 0)
-(ramppan, ramppan_p)          = pF "ramppan" (Just 0)
-(rampvol, rampvol_p)          = pF "rampvol" (Just 0)
+(ampatk, ampatk_p)          = pF "rampatk" (Just 0)
+(amphld, amphld_p)          = pF "ramphld" (Just 0)
+(ampdec, ampdec_p)          = pF "rampdec" (Just 0)
+(ampovr, ampovr_p)          = pF "rampovr" (Just 0)
+(ampdel, ampdel_p)          = pF "rampdel" (Just 0)
+(amprev, amprev_p)          = pF "ramprev" (Just 0)
+(amppan, amppan_p)          = pF "ramppan" (Just 0)
+(ampvol, ampvol_p)          = pF "rampvol" (Just 0)
 
 -- delay params (only used on FX MIDI channel)
 (deltim, deltim_p)    = pF "synth1" (Just 0)
@@ -260,6 +439,23 @@ analog = toShape analogController
 (revhpf, revhpf_p)       = pF "revhpf" (Just 0)
 (revlpf, revlpf_p)       = pF "revlpf" (Just 0)
 (revvol, revvol_p)       = pF "revvol" (Just 0)
+
+-- distortion params (only used on FX MIDI channel)
+(distamt, distamt_p)       = pF "filtatk_p" (Just 0)
+(distsym, distsym_p)       = pF "filtdec_p" (Just 0)
+(distdov, distdov_p)       = pF "filtsus_p" (Just 0)
+(distdel, distdel_p)       = pF "filttyp_p" (Just 0)
+(distrev, distrev_p)       = pF "filtenv_p" (Just 0)
+
+-- compressor params (only used on FX MIDI channel)
+(compthr, compthr_p)       = pF "rampatk_p" (Just 0)
+(compatk, compatk_p)       = pF "ramphld_p" (Just 0)
+(comprel, comprel_p)       = pF "rampdec_p" (Just 0)
+(compmup, compmup_p)       = pF "rampovr_p" (Just 0)
+(comprat, comprat_p)       = pF "rampdel_p" (Just 0)
+(compseq, compseq_p)       = pF "ramprev_p" (Just 0)
+(compmix, compmix_p)       = pF "oscsnc_p" (Just 0)
+(compvol, compvol_p)       = pF "oscbnd_p" (Just 0)
 
 -- performance
 (perf1, perf1_p)         = pF "perf1" (Just 0)
@@ -284,6 +480,16 @@ analog = toShape analogController
 (sampend, sampend_p)     = pF "sampend" (Just 0)
 (samplop, samplop_p)     = pF "samplop" (Just 0)
 (samplev, samplev_p)     = pF "samplev" (Just 0)
+
+--lfo
+(lfospd, lfospd_p)       = pF "flt1dep" (Just 0)
+(lfomul, lfomul_p)       = pF "flt2dep" (Just 0)
+(lfofad, lfofad_p)       = pF "ampatk" (Just 0)
+(lfodst, lfodst_p)       = pF "ampdec" (Just 0)
+(lfowav, lfowav_p)       = pF "ampsus" (Just 0)
+(lfosph, lfosph_p)       = pF "amprel" (Just 0)
+(lfomod, lfomod_p)       = pF "envfatk" (Just 0)
+(lfodep, lfodep_p)       = pF "envfdec" (Just 0)
 
 
 -- Analog Four params
