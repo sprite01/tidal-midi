@@ -179,7 +179,7 @@ analog = toShape analogController
 (bdplmod, bdplmod_p) = pF "synth4" (Just 0)
 (bdplswt, bdplswt_p) = pF "synth5" (Just 0)
 (bdplswd, bdplswd_p) = pF "synth6" (Just 0)
-(bdpltyp, bdplswd_p) = pF "synth7" (Just 0)
+(bdpltyp, bdpltyp_p) = pF "synth7" (Just 0)
 (bdpltic, bdpltic_p) = pF "synth8" (Just 0)
 
 --BD silky
@@ -207,7 +207,7 @@ analog = toShape analogController
 (bdfmtun, bdfmtun_p) = pF "synth2" (Just 0)
 (bdfmdec, bdfmdec_p) = pF "synth3" (Just 0)
 (bdfmfma, bdfmfma_p) = pF "synth4" (Just 0)
-(bdfmswt, bdfmdec_p) = pF "synth5" (Just 0)
+(bdfmswt, bdfmswt_p) = pF "synth5" (Just 0)
 (bdfmfms, bdfmfms_p) = pF "synth6" (Just 0)
 (bdfmfmd, bdfmfmd_p) = pF "synth7" (Just 0)
 (bdfmfmt, bdfmfmt_p) = pF "synth8" (Just 0)
@@ -217,7 +217,7 @@ analog = toShape analogController
 (bdhdtun, bdhdtun_p) = pF "synth2" (Just 0)
 (bdhddec, bdhddec_p) = pF "synth3" (Just 0)
 (bdhdhld, bdhdhld_p) = pF "synth4" (Just 0)
-(bdhdswt, bdhddec_p) = pF "synth5" (Just 0)
+(bdhdswt, bdhdswt_p) = pF "synth5" (Just 0)
 (bdhdsnp, bdhdsnp_p) = pF "synth6" (Just 0)
 (bdhdwav, bdhdwav_p) = pF "synth7" (Just 0)
 (bdhdtic, bdhdtic_p) = pF "synth8" (Just 0)
@@ -225,7 +225,7 @@ analog = toShape analogController
 --BD classic
 (bdcllev, bdcllev_p) = pF "synth1" (Just 0)
 (bdcltun, bdcltun_p) = pF "synth2" (Just 0)
-(bdcldec, bdcltun_p) = pF "synth3" (Just 0)
+(bdcldec, bdcldec_p) = pF "synth3" (Just 0)
 (bdclhld, bdclhld_p) = pF "synth4" (Just 0)
 (bdclswt, bdclswt_p) = pF "synth5" (Just 0)
 (bdclswd, bdclswd_p) = pF "synth6" (Just 0)
@@ -275,7 +275,7 @@ analog = toShape analogController
 --RS hard
 (rshdlev, rshdlev_p) = pF "synth1" (Just 0)
 (rshdtun, rshdtun_p) = pF "synth2" (Just 0)
-(rshddec, rshdtun_p) = pF "synth3" (Just 0)
+(rshddec, rshddec_p) = pF "synth3" (Just 0)
 (rshdswd, rshdswd_p) = pF "synth4" (Just 0)
 (rshdtic, rshdtic_p) = pF "synth5" (Just 0)
 (rshdnol, rshdnol_p) = pF "synth6" (Just 0)
@@ -516,7 +516,7 @@ analog = toShape analogController
 
 (noissah, noissah_p) = pF "noissah" (Just 0)
 (noisfad, noisfad_p) = pF "noisfad" (Just 0)
-(noislev, noislev_p) = pF "noislev" (Just 0)
+(noislevel, noislevel_p) = pF "noislev" (Just 0)
 
 (osc2tun, osc2tun_p) = pF "osc2tun" (Just 0)
 (osc2lev, osc2lev_p) = pF "osc2lev" (Just 0)
@@ -539,15 +539,15 @@ analog = toShape analogController
 (flt2res, flt2res_p) = pF "flt2res" (Just 0)
 (flt2dep, flt2dep_p) = pF "flt2dep" (Just 0)
 
-(ampatk, ampatk_p) = pF "ampatk" (Just 0)
-(ampdec, ampdec_p) = pF "ampdec" (Just 0)
-(ampsus, ampsus_p) = pF "ampsus" (Just 0)
-(amprel, amprel_p) = pF "amprel" (Just 0)
-(ampcho, ampcho_p) = pF "ampcho" (Just 0)
-(ampdel, ampdel_p) = pF "ampdel" (Just 0)
-(amprev, amprev_p) = pF "amprev" (Just 0)
-(amppan, amppan_p) = pF "amppan" (Just 0)
-(ampvol, ampvol_p) = pF "ampvol" (Just 0)
+(amp_atk, amp_atk_p) = pF "ampatk" (Just 0)
+(amp_dec, amp_dec_p) = pF "ampdec" (Just 0)
+(amp_sus, amp_sus_p) = pF "ampsus" (Just 0)
+(amp_rel, amp_rel_p) = pF "amprel" (Just 0)
+(amp_cho, amp_cho_p) = pF "ampcho" (Just 0)
+(amp_del, amp_del_p) = pF "ampdel" (Just 0)
+(amp_rev, amp_rev_p) = pF "amprev" (Just 0)
+(amp_pan, amp_pan_p) = pF "amppan" (Just 0)
+(amp_vol, amp_vol_p) = pF "ampvol" (Just 0)
 
 (envfatk, envfatk_p) = pF "envfatk" (Just 0)
 (envfdec, envfdec_p) = pF "envfdec" (Just 0)
