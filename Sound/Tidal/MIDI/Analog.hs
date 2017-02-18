@@ -109,15 +109,15 @@ analogController = ControllerShape {controls = [
                             mCC flt2res_p 90,
                             mCC flt2dep_p 103,
 
-                            mCC 4ampatk_p 104,
-                            mCC 4ampdec_p 105,
-                            mCC 4ampsus_p 106,
-                            mCC 4amprel_p 107,
-                            mCC 4ampcho_p 91,
-                            mCC 4ampdel_p 92,
-                            mCC 4amprev_p 93,
-                            mCC 4amppan_p 10,
-                            mCC 4ampvol_p 7,
+                            mCC fampatk_p 104,
+                            mCC fampdec_p 105,
+                            mCC fampsus_p 106,
+                            mCC famprel_p 107,
+                            mCC fampcho_p 91,
+                            mCC fampdel_p 92,
+                            mCC famprev_p 93,
+                            mCC famppan_p 10,
+                            mCC fampvol_p 7,
 
                             mCC envfatk_p 108,
                             mCC envfdec_p 109,
@@ -484,10 +484,10 @@ analog = toShape analogController
 --lfo
 (lfospd, lfospd_p)       = pF "flt1dep" (Just 0)
 (lfomul, lfomul_p)       = pF "flt2dep" (Just 0)
-(lfofad, lfofad_p)       = pF "4ampatk" (Just 0)
-(lfodst, lfodst_p)       = pF "4ampdec" (Just 0)
-(lfowav, lfowav_p)       = pF "4ampsus" (Just 0)
-(lfosph, lfosph_p)       = pF "4amprel" (Just 0)
+(lfofad, lfofad_p)       = pF "fampatk" (Just 0)
+(lfodst, lfodst_p)       = pF "fampdec" (Just 0)
+(lfowav, lfowav_p)       = pF "fampsus" (Just 0)
+(lfosph, lfosph_p)       = pF "famprel" (Just 0)
 (lfomod, lfomod_p)       = pF "envfatk" (Just 0)
 (lfodep, lfodep_p)       = pF "envfdec" (Just 0)
 
@@ -539,15 +539,15 @@ analog = toShape analogController
 (flt2res, flt2res_p) = pF "flt2res" (Just 0)
 (flt2dep, flt2dep_p) = pF "flt2dep" (Just 0)
 
-(amp_atk, amp_atk_p) = pF "4ampatk" (Just 0)
-(amp_dec, amp_dec_p) = pF "4ampdec" (Just 0)
-(amp_sus, amp_sus_p) = pF "4ampsus" (Just 0)
-(amp_rel, amp_rel_p) = pF "4amprel" (Just 0)
-(amp_cho, amp_cho_p) = pF "4ampcho" (Just 0)
-(amp_del, amp_del_p) = pF "4ampdel" (Just 0)
-(amp_rev, amp_rev_p) = pF "4amprev" (Just 0)
-(amp_pan, amp_pan_p) = pF "4amppan" (Just 0)
-(amp_vol, amp_vol_p) = pF "4ampvol" (Just 0)
+(amp_atk, amp_atk_p) = pF "fampatk" (Just 0)
+(amp_dec, amp_dec_p) = pF "fampdec" (Just 0)
+(amp_sus, amp_sus_p) = pF "fampsus" (Just 0)
+(amp_rel, amp_rel_p) = pF "famprel" (Just 0)
+(amp_cho, amp_cho_p) = pF "fampcho" (Just 0)
+(amp_del, amp_del_p) = pF "fampdel" (Just 0)
+(amp_rev, amp_rev_p) = pF "famprev" (Just 0)
+(amp_pan, amp_pan_p) = pF "famppan" (Just 0)
+(amp_vol, amp_vol_p) = pF "fampvol" (Just 0)
 
 (envfatk, envfatk_p) = pF "envfatk" (Just 0)
 (envfdec, envfdec_p) = pF "envfdec" (Just 0)
