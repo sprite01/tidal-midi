@@ -145,7 +145,7 @@ analogController = ControllerShape {controls = [
                             ],
                            -- duration = ("dur", 0.05),
                            -- velocity = ("vel", 0.5),
-                           latency = 0.007}
+                           latency = 0.01}
 
 
 analog = toShape analogController
@@ -176,11 +176,11 @@ analog = toShape analogController
 (bdpllev, bdpllev_p) = pF "synth1" (Just 0)
 (bdpltun, bdpltun_p) = pF "synth2" (Just 0)
 (bdpldec, bdpldec_p) = pF "synth3" (Just 0)
-(bdplmod, bdplmod_p) = pF "synth6" (Just 0)
+(bdplmod, bdplmod_p) = pF "synth8" (Just 0)
 (bdplswt, bdplswt_p) = pF "synth5" (Just 0)
-(bdplswd, bdplswd_p) = pF "synth7" (Just 0)
-(bdpltyp, bdpltyp_p) = pF "synth8" (Just 0)
-(bdpltic, bdpltic_p) = pF "synth4" (Just 0)
+(bdplswd, bdplswd_p) = pF "synth4" (Just 0)
+(bdpltyp, bdpltyp_p) = pF "synth6" (Just 0)
+(bdpltic, bdpltic_p) = pF "synth7" (Just 0)
 
 --BD silky
 (bdsilev, bdsilev_p) = pF "synth1" (Just 0)
