@@ -1,4 +1,4 @@
-module Sound.Tidal.MIDI.Analog where
+fourampmodule Sound.Tidal.MIDI.Analog where
 
 import Sound.Tidal.Params
 import Sound.Tidal.MIDI.Control
@@ -109,15 +109,15 @@ analogController = ControllerShape {controls = [
                             mCC flt2res_p 90,
                             mCC flt2dep_p 103,
 
-                            mCC fampatk_p 104,
-                            mCC fampdec_p 105,
-                            mCC fampsus_p 106,
-                            mCC famprel_p 107,
-                            mCC fampcho_p 91,
-                            mCC fampdel_p 92,
-                            mCC famprev_p 93,
-                            mCC famppan_p 10,
-                            mCC fampvol_p 7,
+                            mCC fourampatk_p 104,
+                            mCC fourampdec_p 105,
+                            mCC fourampsus_p 106,
+                            mCC fouramprel_p 107,
+                            mCC fourampcho_p 91,
+                            mCC fourampdel_p 92,
+                            mCC fouramprev_p 93,
+                            mCC fouramppan_p 10,
+                            mCC fourampvol_p 7,
 
                             mCC envfatk_p 108,
                             mCC envfdec_p 109,
@@ -441,21 +441,21 @@ analog = toShape analogController
 (revvol, revvol_p)       = pF "revvol" (Just 0)
 
 -- distortion params (only used on FX MIDI channel)
-(distamt, distamt_p)       = pF "filtatk_p" (Just 0)
-(distsym, distsym_p)       = pF "filtdec_p" (Just 0)
-(distdov, distdov_p)       = pF "filtsus_p" (Just 0)
-(distdel, distdel_p)       = pF "filttyp_p" (Just 0)
-(distrev, distrev_p)       = pF "filtenv_p" (Just 0)
+(distamt, distamt_p)       = pF "filtatk" (Just 0)
+(distsym, distsym_p)       = pF "filtdec" (Just 0)
+(distdov, distdov_p)       = pF "filtsus" (Just 0)
+(distdel, distdel_p)       = pF "filttyp" (Just 0)
+(distrev, distrev_p)       = pF "filtenv" (Just 0)
 
 -- compressor params (only used on FX MIDI channel)
-(compthr, compthr_p)       = pF "ampatk_p" (Just 0)
-(compatk, compatk_p)       = pF "amphld_p" (Just 0)
-(comprel, comprel_p)       = pF "ampdec_p" (Just 0)
-(compmup, compmup_p)       = pF "ampovr_p" (Just 0)
-(comprat, comprat_p)       = pF "ampdel_p" (Just 0)
-(compseq, compseq_p)       = pF "amprev_p" (Just 0)
-(compmix, compmix_p)       = pF "oscsnc_p" (Just 0)
-(compvol, compvol_p)       = pF "oscbnd_p" (Just 0)
+(compthr, compthr_p)       = pF "ampatk" (Just 0)
+(compatk, compatk_p)       = pF "amphld" (Just 0)
+(comprel, comprel_p)       = pF "ampdec" (Just 0)
+(compmup, compmup_p)       = pF "ampovr" (Just 0)
+(comprat, comprat_p)       = pF "ampdel" (Just 0)
+(compseq, compseq_p)       = pF "amprev" (Just 0)
+(compmix, compmix_p)       = pF "oscsnc" (Just 0)
+(compvol, compvol_p)       = pF "oscbnd" (Just 0)
 
 -- performance
 (perf1, perf1_p)         = pF "perf1" (Just 0)
@@ -484,10 +484,10 @@ analog = toShape analogController
 --lfo
 (lfospd, lfospd_p)       = pF "flt1dep" (Just 0)
 (lfomul, lfomul_p)       = pF "flt2dep" (Just 0)
-(lfofad, lfofad_p)       = pF "fampatk" (Just 0)
-(lfodst, lfodst_p)       = pF "fampdec" (Just 0)
-(lfowav, lfowav_p)       = pF "fampsus" (Just 0)
-(lfosph, lfosph_p)       = pF "famprel" (Just 0)
+(lfofad, lfofad_p)       = pF "fourampatk" (Just 0)
+(lfodst, lfodst_p)       = pF "fourampdec" (Just 0)
+(lfowav, lfowav_p)       = pF "fourampsus" (Just 0)
+(lfosph, lfosph_p)       = pF "fouramprel" (Just 0)
 (lfomod, lfomod_p)       = pF "envfatk" (Just 0)
 (lfodep, lfodep_p)       = pF "envfdec" (Just 0)
 
@@ -539,15 +539,15 @@ analog = toShape analogController
 (flt2res, flt2res_p) = pF "flt2res" (Just 0)
 (flt2dep, flt2dep_p) = pF "flt2dep" (Just 0)
 
-(amp_atk, amp_atk_p) = pF "fampatk" (Just 0)
-(amp_dec, amp_dec_p) = pF "fampdec" (Just 0)
-(amp_sus, amp_sus_p) = pF "fampsus" (Just 0)
-(amp_rel, amp_rel_p) = pF "famprel" (Just 0)
-(amp_cho, amp_cho_p) = pF "fampcho" (Just 0)
-(amp_del, amp_del_p) = pF "fampdel" (Just 0)
-(amp_rev, amp_rev_p) = pF "famprev" (Just 0)
-(amp_pan, amp_pan_p) = pF "famppan" (Just 0)
-(amp_vol, amp_vol_p) = pF "fampvol" (Just 0)
+(amp_atk, amp_atk_p) = pF "fourampatk" (Just 0)
+(amp_dec, amp_dec_p) = pF "fourampdec" (Just 0)
+(amp_sus, amp_sus_p) = pF "fourampsus" (Just 0)
+(amp_rel, amp_rel_p) = pF "fouramprel" (Just 0)
+(amp_cho, amp_cho_p) = pF "fourampcho" (Just 0)
+(amp_del, amp_del_p) = pF "fourampdel" (Just 0)
+(amp_rev, amp_rev_p) = pF "fouramprev" (Just 0)
+(amp_pan, amp_pan_p) = pF "fouramppan" (Just 0)
+(amp_vol, amp_vol_p) = pF "fourampvol" (Just 0)
 
 (envfatk, envfatk_p) = pF "envfatk" (Just 0)
 (envfdec, envfdec_p) = pF "envfdec" (Just 0)
