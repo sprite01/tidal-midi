@@ -145,7 +145,7 @@ analogController = ControllerShape {controls = [
                             ],
                            -- duration = ("dur", 0.05),
                            -- velocity = ("vel", 0.5),
-                           latency = 0.13931}
+                           latency = 0.05931}
 
 
 analog = toShape analogController
