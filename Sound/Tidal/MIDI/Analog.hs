@@ -26,7 +26,7 @@ analogController = ControllerShape {controls = [
                             mCC samptun_p 24,
                             mCC sampfin_p 25,
                             mCC sampbr_p 26,
-                            mCC sampsmp_p 27 passThru,
+                            mCC sampsmp_p 27 (1, 127) passThru,
                             mCC sampsta_p 28,
                             mCC sampend_p 29,
                             mCC samplop_p 30,
